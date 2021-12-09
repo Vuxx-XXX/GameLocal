@@ -21,9 +21,9 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && isGrounded)
+        if (Input.GetKey(KeyCode.Space) && isGrounded)
         {
-           // SoundEffect.PlaySound("jump");
+           
             character.velocity = Vector2.up * jumpForce;
         }
         anim.SetBool("isGrounded", isGrounded);
