@@ -17,11 +17,11 @@ public class PlayerScript : MonoBehaviour
         character = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
-
+    
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space) && isGrounded)
+        if (Input.GetTouch(0).phase==TouchPhase.Began && isGrounded)
         {
            
             character.velocity = Vector2.up * jumpForce;
